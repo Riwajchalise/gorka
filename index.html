@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Link to the external CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about_us">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu"><i class="fa-solid fa-bars"></i></div>
+            </div>
+            <a href="#"><img src="language.png" class="highlight" alt="Language"></a>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about_us">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#"><img src="language.png" class="highlight" alt="Language"></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <!-- Background Video -->
+        <video autoplay muted loop class="bg-video">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Overlay Content -->
+        <div class="overlay">
+            <h1>Empower Your Business with Expert IT Consulting</h1>
+            <p>Cloud Computing • Microsoft 365 • Cybersecurity • IT Services</p>
+            <a href="#" class="cta-button">Get started today</a>
+        </div>
+    </section>
+    <section id="services" class="our_services animated-section">
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-container">
+                <div class="service">
+                    <div class="logo-service">
+                        <img src="cloudserver.png" alt="Microsoft 365" class="cloud">
+                    </div>
+
+                    <div class="service-content">
+                        <h3>Cloud &amp; On-Prem</h3>
+                        <ul>
+                            <li>Architecture design</li>
+                        <li>Cloud migration strategies</li>
+                        <li>Application deployment</li>
+                        <li>DevOps workflows</li>
+                        <li>Hybrid architectures</li>
+                        <li>Advanced networking</li>
+                        <li>Infrastructure as Code</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="service">
+                <div class="logo-service"><img src="microsoft.png" alt="Microsoft 365"></div>
+
+                <div class="service-content">
+                    <h3>Microsoft 365</h3>
+                    <ul>
+                        <li>Tenant hardening & cybersecurity</li>
+                        <li>Intune administration & deployment</li>
+                        <li>Data Loss Prevention (DLP) solutions</li>
+                        <li>Entra ID administration</li>
+                        <li>Microsoft security solutions</li>
+                        <li>PowerApps & Power Automate</li>
+                        <li>Managed services</li>
+                        <li>Licensing support as a Microsoft Partner</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="logo-service"><img src="consulting.png" alt="IT & Cybersecurity consultation"></div>
+
+                <div class="service-content">
+                    <h3>IT & Cybersecurity consultation</h3>
+                    <ul>
+                        <li>Secure network architectures</li>
+                        <li>Infrastructure hardening</li>
+                        <li>IT security assessments</li>
+                        <li>Network engineering</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="logo-service"><img src="mingcute_code-fill@2x.png" alt="Web & Development Services">
+                </div>
+                <div class="service-content">
+                    <h3>Web & Development Services</h3>
+                    <ul>
+                        <li>Webpage development</li>
+                        <li>Domain and hosting administration</li>
+                        <li>Web app development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<section id="about_us" class="about animated-section">
+    <h2>About us</h2>
+    <p class="about-text">
+        GRK IT is a specialized IT consulting firm focused on cloud computing, Microsoft 365, cybersecurity, and
+        comprehensive IT services.
+        We deliver agile, innovative solutions that drive digital transformation and secure your business
+        infrastructure.
+    </p>
+
+    <h3>Our team</h3>
+    <p class="team-text">
+        Founded and operated by <strong>Gorka Olalde</strong>—who holds certifications in <strong>Microsoft
+            SC-300</strong>, <strong>CompTIA Network+</strong>,
+        and <strong>AWS Solutions Architect Associate</strong>—GRK IT offers personalized attention to every
+        project.
+        We complement our expertise with strategic partnerships tailored to the specific technical needs of each
+        project.
+        Learn more about Gorka’s professional journey on his
+        <a href="#" class="linkedin-link">LinkedIn profile.</a>
+    </p>
+
+    <div class="certifications">
+        <img src="mic_cer.png" alt="Microsoft Certified Associate">
+        <img src="comp.png" alt="CompTIA Network+">
+        <img src="aws.png" alt="AWS Solutions Architect">
+    </div>
+
+    <h3>Partnerships</h3>
+    <p class="about-text">As a recognized Microsoft Partner, we leverage the latest Microsoft innovations and
+        best-in-class support to enhance our service offerings and ensure excellence in every solution.</p>
+    <div class="partner">
+        <img src="partner.png" alt="" class="partner" srcset="">
+    </div>
+</section>
+
+<section id="contact" class="contact animated-section">
+    <div class="contact-container">
+
+        <header>
+            <h1>Contact Us</h1>
+        </header>
+        <!-- Left Section: Contact Information -->
+
+        <div class="contact-side">
+            <div class="contact-info">
+
+                <p>
+                    Located in Araia, Basque Country, Spain, GRK IT is ready to help you navigate the ever-changing
+                    IT
+                    landscape. Whether you need expert guidance in cloud computing, Microsoft 365, cybersecurity, or
+                    a
+                    comprehensive IT solution, our personalized approach ensures you get the dedicated support you
+                    deserve.
+                </p>
+
+                <h3>Reach Out Today:</h3>
+                <ul>
+                    <li><strong>Contact Form:</strong> Fill out our easy-to-use form for a prompt response.</li>
+                    <li><strong>Phone & Email:</strong> Connect with us directly for any inquiries.</li>
+                    <li><strong>Schedule a Consultation:</strong> Book your free consultation and start your digital
+                        transformation journey.</li>
+                </ul>
+                <p>We look forward to connecting with you!</p>
+
+                <h3>GRK IT Cloud & Services S.L.</h3>
+                <p><strong>Address:</strong> Salsamendi 24, 01250 Araia, Alava, Spain</p>
+                <p><strong>Phone:</strong> +34 637 937 045</p>
+                <p><strong>Email:</strong> <a href="mailto:info@grk-it.com">info@grk-it.com</a></p>
+            </div>
+
+            <!-- Right Section: Contact Form -->
+            <div class="contact-form">
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email" required>
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="Your Phone Number" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="footer_main">
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="logo.png" alt="GRK IT Logo" class="footer-logo">
+            <p>info@grk-it.com</p>
+            <p>(+34) 637 937 045</p>
+            <div class="social-icons">
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <a href="#">Legal Notice</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+        </div>
+    </footer>
+</section>
+<script src="script.js"></script>
+<script src="scr.js"></script>
+</body>
+
+</html>
