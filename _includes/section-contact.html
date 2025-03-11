@@ -1,0 +1,45 @@
+<section id="contact" class="contact animated-section">
+    <div class="contact-container">
+        <header>
+            <h1>{{ site.data.settings.contact.heading }}</h1>
+        </header>
+
+        <div class="contact-side">
+            <div class="contact-info">
+                <p>{{ site.data.settings.contact.description }}</p>
+
+                <h3>{{ site.data.settings.contact.reach_out_heading }}</h3>
+                <ul>
+                    {% for item in site.data.settings.contact.reach_out_list %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+
+                <p>We look forward to connecting with you!</p>
+
+                <h3>{{ site.data.settings.contact.company_name }}</h3>
+                <p><strong>Address:</strong> {{ site.data.settings.contact.address }}</p>
+                <p><strong>Phone:</strong> {{ site.data.settings.contact.phone }}</p>
+                <p><strong>Email:</strong> <a href="mailto:{{ site.data.settings.contact.email }}">{{ site.data.settings.contact.email }}</a></p>
+            </div>
+
+            <div class="contact-form">
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email" required>
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="Your Phone Number" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

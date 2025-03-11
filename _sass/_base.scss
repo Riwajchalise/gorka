@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background: #eee;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+
+.home-page {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+}
+
+
+
+h1.page-title {
+    font-size: 3em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+
+.line {
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+article.page.container {
+    padding: 5px 30px;
+}
+
+
+
+.page {
+
+
+    .post__content,
+    .page__content {
+        color: var(--text-alt-color);
+
+        a {
+            color: blue;
+
+            border-bottom: 1px solid #e6e6e6;
+            text-decoration: none;
+
+            &:hover {
+
+                border-bottom-color: black;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+    }
+
+    .profile-image img {
+        width: 100%;
+    }
+
+    .main-page {
+        width: 100%;
+    }
+
+    #Static-home {
+        padding: 0;
+    }
+
+    svg {
+        width: 45px;
+    }
+
+    .nav-bar nav ul {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .nav-bar.open {
+        position: relative;
+        transform: translateY(0)
+    }
+
+    .nav-bar {
+        top: 0px !important;
+    }
+
+    #header {
+        padding-top: 0px;
+    }
+
+    #header h1 {
+        font-size: 40px;
+    }
+
+    .row {
+        padding: 5px;
+    }
+
+    .container {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    h1.page-title {
+        margin-top: 0 !important;
+    }
+}
+
+
+/* General nav bar styles */
+.nav-bar {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+.nav-bar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 3em;
+}
+
+
+
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+}
+
+.line {
+    fill: none;
+    stroke: white;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+/* Hide the nav bar by default on smaller screens */
+.nav-bar {
+    display: none;
+    position: absolute;
+    top: 100px;
+    /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    /* Background color */
+    text-align: center;
+    z-index: 10;
+}
+
+/* Display nav bar when the hamburger is toggled */
+.nav-bar.open {
+    display: block;
+    background-color: transparent;
+}
+
+/* Show the hamburger menu only on small screens */
+.hamburger {
+    display: block;
+}
+
+/* On larger screens, show the nav bar and hide the hamburger menu */
+@media (min-width: 768px) {
+    .nav-bar {
+        display: block;
+        position: static;
+        background: none;
+        display: flex;
+
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+
+}

@@ -1,0 +1,137 @@
+#-------------------------------
+# Site Settings
+title: GRK IT
+description:  IT consulting firm focused on cloud computing, Microsoft 365, cybersecurity, and comprehensive IT services
+color_scheme: light # You have the option to choose between three modes: auto, light, and dark. The default mode is set to auto, which means that the color scheme will automatically adapt based on your operating system settings. This way, you can enjoy a personalized experience without having to manually switch between light and dark modes.
+
+
+
+#-------------------------------
+menu_settings:
+  menu_items:
+    - title: 'Home'
+      url: '/'
+    - title: 'Services'
+      url: '#services'
+    - title: 'About Us'
+      url: '#about_us'
+    - title: 'Contact'
+      url: '#contact'
+  images:
+    logo: '/images/logo.png'
+    language_icon: '/images/language.png'
+
+video:
+    hero_video: '/images/video.mp4'
+    overlay:
+      heading: 'Empower Your Business with Expert IT Consulting'
+      description: 'Cloud Computing • Microsoft 365 • Cybersecurity • IT Services'
+      cta_button_text: 'Get started today'
+
+#-------------------------------
+services:
+    - title: 'Cloud &amp; On-Prem'
+      image: '/images/cloudserver.png'
+      class: 'cloud'
+      description:
+        - 'Architecture design'
+        - 'Cloud migration strategies'
+        - 'Application deployment'
+        - 'DevOps workflows'
+        - 'Hybrid architectures'
+        - 'Advanced networking'
+        - 'Infrastructure as Code'
+
+    - title: 'Microsoft 365'
+      image: '/images/microsoft.png'
+      class: 'microsoft'
+      description:
+        - 'Tenant hardening & cybersecurity'
+        - 'Intune administration & deployment'
+        - 'Data Loss Prevention (DLP) solutions'
+        - 'Entra ID administration'
+        - 'Microsoft security solutions'
+        - 'PowerApps & Power Automate'
+        - 'Managed services'
+        - 'Licensing support as a Microsoft Partner'
+
+    - title: 'IT & Cybersecurity consultation'
+      image: '/images/consulting.png'
+      class: 'itandcyber'
+      description:
+        - 'Secure network architectures'
+        - 'Infrastructure hardening'
+        - 'IT security assessments'
+        - 'Network engineering'
+
+    - title: 'Web & Development Services'
+      image: '/images/mingcute_code-fill@2x.png'
+      class: 'webdev'
+      description:
+        - 'Webpage development'
+        - 'Domain and hosting administration'
+        - 'Web app development'
+
+about_us:
+  title: "About Us"
+  description: "GRK IT is a specialized IT consulting firm focused on cloud computing, Microsoft 365, cybersecurity, and comprehensive IT services. We deliver agile, innovative solutions that drive digital transformation and secure your business infrastructure."
+  team:
+    name: "Gorka Olalde"
+    description: "GRK IT offers personalized attention to every project. We complement our expertise with strategic partnerships tailored to the specific technical needs of each project. Learn more about Gorka’s professional journey on his"
+    certifications:
+      - "Microsoft SC-300"
+      - "CompTIA Network+"
+      - "AWS Solutions Architect Associate"
+    linkedin_url: "#"
+  certifications:
+    microsoft: "/images/mic_cer.png"
+    comptia: "/images/comp.png"
+    aws: "/images/aws.png"
+  partnerships:
+    description: "As a recognized Microsoft Partner, we leverage the latest Microsoft innovations and best-in-class support to enhance our service offerings and ensure excellence in every solution."
+    partner_image: "/images/partner.png"
+
+
+contact:
+  heading: "Contact Us"
+  description: "Located in Araia, Basque Country, Spain, GRK IT is ready to help you navigate the ever-changing IT landscape. Whether you need expert guidance in cloud computing, Microsoft 365, cybersecurity, or a comprehensive IT solution, our personalized approach ensures you get the dedicated support you deserve."
+  
+  reach_out_heading: "Reach Out Today:"
+  reach_out_list:
+    - "Contact Form: Fill out our easy-to-use form for a prompt response."
+    - "Phone & Email: Connect with us directly for any inquiries."
+    - "Schedule a Consultation: Book your free consultation and start your digital transformation journey."
+
+  company_name: "GRK IT Cloud & Services S.L."
+  address: "Salsamendi 24, 01250 Araia, Alava, Spain"
+  phone: "+34 637 937 045"
+  email: "info@grk-it.com"
+
+
+footer:
+  logo: "/images/logo.png"
+  email: "info@grk-it.com"
+  phone: "(+34) 637 937 045"
+
+  social_links:
+    - icon: "bi bi-twitter-x"
+      url: "#"
+    - icon: "fab fa-instagram"
+      url: "#"
+    - icon: "fab fa-youtube"
+      url: "#"
+    - icon: "fab fa-linkedin"
+      url: "#"
+
+  policies:
+    - title: "Legal Notice"
+      url: "/legal-notice"
+    - title: "Privacy Policy"
+      url: "/privacy-policy"
+    - title: "Cookie Policy"
+      url: "/cookie-policy"
+
+
+#-------------------------------
+# Google Analytics
+google-analytics: 

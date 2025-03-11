@@ -1,0 +1,19 @@
+<section class="footer_main">
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="{{ site.data.settings.footer.logo }}" alt="GRK IT Logo" class="footer-logo">
+            <p>{{ site.data.settings.footer.email }}</p>
+            <p>{{ site.data.settings.footer.phone }}</p>
+            <div class="social-icons">
+                {% for social in site.data.settings.footer.social_links %}
+                    <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="footer-right">
+            {% for policy in site.data.settings.footer.policies %}
+                <a href="{{ policy.url }}">{{ policy.title }}</a>
+            {% endfor %}
+        </div>
+    </footer>
+</section>
