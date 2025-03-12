@@ -2,18 +2,30 @@
     <footer class="footer">
         <div class="footer-left">
             <img src="{{ site.data.settings.footer.logo }}" alt="GRK IT Logo" class="footer-logo">
-            <p>{{ site.data.settings.footer.email }}</p>
-            <p>{{ site.data.settings.footer.phone }}</p>
+            <p>
+                <a href="mailto:{{ site.data.settings.footer.email }}">
+                    {{ site.data.settings.footer.email }}
+                </a>
+            </p>
+            <p>
+                <a href="tel:{{ site.data.settings.footer.phone }}">
+                    {{ site.data.settings.footer.phone }}
+                </a>
+            </p>
             <div class="social-icons">
                 {% for social in site.data.settings.footer.social_links %}
-                    <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+                <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
                 {% endfor %}
             </div>
         </div>
         <div class="footer-right">
             {% for policy in site.data.settings.footer.policies %}
-                <a href="{{ policy.url }}">{{ policy.title }}</a>
+            <a href="{{ policy.url }}">{{ policy.title }}</a>
             {% endfor %}
         </div>
     </footer>
+    <div class="copyright">
+        &copy;
+        <script>document.write(new Date().getFullYear())</script> Copyright
+    </div>
 </section>
