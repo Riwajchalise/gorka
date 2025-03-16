@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (targetId.startsWith("/#") || targetId.startsWith("#")) {
                 if (window.location.pathname !== "/") {
                     sessionStorage.setItem("scrollTo", targetId);
-                    sessionStorage.setItem("smoothScroll", "true"); // Disable smooth scroll on load
+                    sessionStorage.setItem("smoothScroll", "false"); // Disable smooth scroll on load
                     
                     // Check the document's language and redirect to the appropriate homepage
                     const lang = document.documentElement.lang === "es" ? "/es/" : "/"; 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Scroll to section on page load without first jumping to the top
     const storedTarget = sessionStorage.getItem("scrollTo");
-    const smoothScroll = sessionStorage.getItem("smoothScroll") === "false";
+    const smoothScroll = sessionStorage.getItem("smoothScroll") === "true";
 
     if (storedTarget) {
         sessionStorage.removeItem("scrollTo");

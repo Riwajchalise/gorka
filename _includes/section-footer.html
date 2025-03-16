@@ -1,25 +1,25 @@
 <section class="footer_main">
     <footer class="footer">
         <div class="footer-left">
-            <img src="{{ site.data.settings.footer.logo }}" alt="GRK IT Logo" class="footer-logo">
+            <img src="{{ site.data[page.lang].footer.logo }}" alt="GRK IT Logo" class="footer-logo">
             <p>
-                <a href="mailto:{{ site.data.settings.footer.email }}">
-                    {{ site.data.settings.footer.email }}
+                <a href="mailto:{{ site.data[page.lang].footer.email }}">
+                    {{ site.data[page.lang].footer.email }}
                 </a>
             </p>
             <p>
-                <a href="tel:{{ site.data.settings.footer.phone }}">
-                    {{ site.data.settings.footer.phone }}
+                <a href="tel:{{ site.data[page.lang].footer.phone }}">
+                    {{ site.data[page.lang].footer.phone }}
                 </a>
             </p>
             <div class="social-icons">
-                {% for social in site.data.settings.footer.social_links %}
+                {% for social in site.data[page.lang].footer.social_links %}
                 <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
                 {% endfor %}
             </div>
         </div>
         <div class="footer-right">
-            {% for policy in site.data.settings.footer.policies %}
+            {% for policy in site.data[page.lang].footer.policies %}
             <a href="{{ policy.url }}">{{ policy.title }}</a>
             {% endfor %}
         </div>

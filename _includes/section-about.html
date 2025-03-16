@@ -1,31 +1,31 @@
 
 
 <section id="about_us" class="about animated-section">
-  <h2>{{ site.data.settings.about_us.title }}</h2>
+  <h2>{{ site.data[page.lang].about_us.title }}</h2>
   <p class="about-text">
-    {{ site.data.settings.about_us.description }}
+    {{ site.data[page.lang].about_us.description }}
   </p>
 
   <h3>Our Team</h3>
   <p class="team-text">
-    Founded and operated by <strong>{{ site.data.settings.about_us.team.name }}</strong>—who holds certifications in
-    {% for cert in site.data.settings.about_us.team.certifications %}
+    Founded and operated by <strong>{{ site.data[page.lang].about_us.team.name }}</strong>—who holds certifications in
+    {% for cert in site.data[page.lang].about_us.team.certifications %}
       <strong>{{ cert }}</strong>{% if forloop.last == false %}, {% endif %}
-    {% endfor %}—{{ site.data.settings.about_us.team.description }}
-    <a href="{{ site.data.settings.about_us.team.linkedin_url }}" class="linkedin-link">LinkedIn profile.</a>
+    {% endfor %}—{{ site.data[page.lang].about_us.team.description }}
+    <a href="{{ site.data[page.lang].about_us.team.linkedin_url }}" class="linkedin-link">LinkedIn profile.</a>
   </p>
 
   <div class="certifications">
-    <img src="{{ site.baseurl }}{{ site.data.settings.about_us.certifications.microsoft }}" alt="Microsoft Certified Associate">
-    <img src="{{ site.baseurl }}{{ site.data.settings.about_us.certifications.comptia }}" alt="CompTIA Network+">
-    <img src="{{ site.baseurl }}{{ site.data.settings.about_us.certifications.aws }}" alt="AWS Solutions Architect">
+    <img src="{{ site.baseurl }}{{ site.data[page.lang].about_us.certifications.microsoft }}" alt="Microsoft Certified Associate">
+    <img src="{{ site.baseurl }}{{ site.data[page.lang].about_us.certifications.comptia }}" alt="CompTIA Network+">
+    <img src="{{ site.baseurl }}{{ site.data[page.lang].about_us.certifications.aws }}" alt="AWS Solutions Architect">
   </div>
 
   <h3>Partnerships</h3>
   <p class="about-text">
-    {{ site.data.settings.about_us.partnerships.description }}
+    {{ site.data[page.lang].about_us.partnerships.description }}
   </p>
   <div class="partner">
-    <img src="{{ site.baseurl }}{{ site.data.settings.about_us.partnerships.partner_image }}" alt="Partner" class="partner">
+    <img src="{{ site.baseurl }}{{ site.data[page.lang].about_us.partnerships.partner_image }}" alt="Partner" class="partner">
   </div>
 </section>

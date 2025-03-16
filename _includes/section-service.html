@@ -1,22 +1,22 @@
 <section id="services" class="our_services animated-section">
     <section class="services">
-        <h2>Our Services</h2>
+        <h2>{{ site.data[page.lang].section_title }}</h2>
         <div class="service-container">
-            {% for service in site.data.settings.services %}
-                <div class="service">
-                    <div class="logo-service">
-                        <img src="{{ service.image }}" alt="{{ service.title }}"" class="{{ service.class }}" >
-                    </div>
-
-                    <div class="service-content">
-                        <h3>{{ service.title }}</h3>
-                        <ul>
-                            {% for item in service.description %}
-                                <li>{{ item }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+            {% for service in site.data[page.lang].services %}
+            <div class="service">
+                <div class="logo-service">
+                    <img src="{{ service.image }}" alt="{{ service.title }}" class="{{ service.class }}">
                 </div>
+
+                <div class="service-content">
+                    <h3>{{ service.title }}</h3>
+                    <ul>
+                        {% for item in service.description %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
             {% endfor %}
         </div>
     </section>

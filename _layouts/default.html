@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+<head>
+  <!-- Font Awesome and other external resources -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Kanit&display=swap" rel="stylesheet">
-
-  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"   />
-
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  
   <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
+  <!-- Include custom JS files -->
   <script src="{{ site.baseurl }}/assets/js/script.js"></script>
   <script src="{{ site.baseurl }}/assets/js/hamburger.js"></script>
   <script src="{{ site.baseurl }}/assets/js/cookie.js" defer></script>
-  
+  <script src="{{ site.baseurl }}/assets/js/language.js" defer></script>
 
-{% include head.html %}
-
-
+  <!-- Include additional head content from head.html -->
+  {% include head.html %}
+</head>
 
 <body>
   <div class="home-page">
@@ -27,12 +30,17 @@
       {% if site.data.settings.google-analytics %}
         {% include google-analytics.html %}
       {% endif %}
+      
+      <!-- Include header from header.html -->
       {% include header.html %}
+      
+      <!-- This is where the page-specific content will go -->
       {{ content }}
     </div>
+
+    <!-- Include footer content from section-footer.html -->
     {% include section-footer.html %}
   </div>
-  
 </body>
 
 </html>

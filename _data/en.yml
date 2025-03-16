@@ -10,13 +10,13 @@ color_scheme: light # You have the option to choose between three modes: auto, l
 menu_settings:
   menu_items:
     - title: 'Home'
-      url: '/'
+      url: '/#home'
     - title: 'Services'
-      url: '#services'
+      url: '/#services'
     - title: 'About Us'
-      url: '#about_us'
+      url: '/#about_us'
     - title: 'Contact'
-      url: '#contact'
+      url: '/#contact'
   images:
     logo: '/images/logo.png'
     language_icon: '/images/language.png'
@@ -29,6 +29,8 @@ video:
       cta_button_text: 'Get started today'
 
 #-------------------------------
+
+section_title: "Our Services"
 services:
     - title: 'Cloud &amp; On-Prem'
       image: '/images/cloudserver.png'
@@ -103,9 +105,22 @@ contact:
     - "Schedule a Consultation: Book your free consultation and start your digital transformation journey."
 
   company_name: "GRK IT Cloud & Services S.L."
+  address_label: "Address"
   address: "Salsamendi 24, 01250 Araia, Alava, Spain"
+  phone_label: "Phone"
   phone: "+34 637 937 045"
+  email_label: "Email"
   email: "info@grk-it.com"
+  form:
+    name_label: "Name"
+    name_placeholder: "Your Name"
+    email_label: "Email"
+    email_placeholder: "Your Email"
+    phone_label: "Phone"
+    phone_placeholder: "Your Phone Number"
+    message_label: "Message"
+    message_placeholder: "Your Message"
+    submit_button: "Submit"
 
 
 footer:

@@ -4,84 +4,96 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".navbar");
     const navbarHeight = navbar ? navbar.offsetHeight : 60;
 
-    // Function to trigger animation again
-    function triggerAnimation(targetElement) {
-        targetElement.classList.remove("show");
-        setTimeout(() => {
-            targetElement.classList.add("show");
-        }, 100);
+    function updateActiveClass(targetId) {
+        navLinks.forEach(nav => nav.classList.remove("active"));
+        let normalizedTarget = targetId.replace(/^\/#/, "#");
+
+        const activeLink = [...navLinks].find(link => {
+            let linkHref = link.getAttribute("href");
+            return linkHref.replace(/^\/#/, "#") === normalizedTarget;
+        });
+
+        if (activeLink) {
+            activeLink.classList.add("active");
+        }
     }
 
-    // Smooth scrolling and triggering animation
+    function scrollToSection(targetId, smooth = true) {
+        const targetElement = document.getElementById(targetId.replace(/^\/#/, ""));
+        if (targetElement) {
+            const offsetTop = targetElement.offsetTop - navbarHeight - 10;
+
+            window.scrollTo({
+                top: offsetTop,
+                behavior: smooth ? "smooth" : "instant"
+            });
+
+            updateActiveClass(targetId);
+        }
+    }
+
+    // Handle clicks on navigation links
     navLinks.forEach(link => {
         link.addEventListener("click", function (e) {
             const targetId = this.getAttribute("href");
+            e.preventDefault();
 
-            // Scroll to top if Home link is clicked
             if (targetId === "/") {
-                e.preventDefault(); // Prevent default scroll behavior
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
-
-                // Remove # from URL after scrolling
+                window.scrollTo({ top: 0, behavior: "smooth" });
                 history.replaceState(null, null, " ");
-
-                // Update active class
-                navLinks.forEach(nav => nav.classList.remove("active"));
-                this.classList.add("active");
+                updateActiveClass(targetId);
                 return;
             }
 
-            e.preventDefault(); // Prevent default only for internal section links
-            const targetElement = document.getElementById(targetId.substring(1));
-
-            if (targetElement) {
-                const offsetTop = targetElement.offsetTop - navbarHeight - 10;
-
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: "smooth"
-                });
-
-                // Remove # from URL after scrolling
-                history.replaceState(null, null, " ");
-
-                // Retrigger animation
-                triggerAnimation(targetElement);
-
-                // Update active class
-                navLinks.forEach(nav => nav.classList.remove("active"));
-                this.classList.add("active");
-            }
+            if (targetId.startsWith("/#") || targetId.startsWith("#")) {
+                if (window.location.pathname !== "/") {
+                    sessionStorage.setItem("scrollTo", targetId);
+                    sessionStorage.setItem("smoothScroll", "true"); // Disable smooth scroll on load
+                    
+                    // Check the document's language and redirect to the appropriate homepage
+                    const lang = document.documentElement.lang === "es" ? "/es/" : "/"; 
+                    window.location.href = lang;
+                } else {
+                    scrollToSection(targetId);
+                }
+            }            
         });
     });
 
-    // Intersection Observer for updating active link on scroll
+    // Scroll to section on page load without first jumping to the top
+    const storedTarget = sessionStorage.getItem("scrollTo");
+    const smoothScroll = sessionStorage.getItem("smoothScroll") === "false";
+
+    if (storedTarget) {
+        sessionStorage.removeItem("scrollTo");
+        sessionStorage.removeItem("smoothScroll");
+
+        setTimeout(() => {
+            scrollToSection(storedTarget, smoothScroll);
+        }, 0); // Execute immediately after page loads
+    }
+
+    // Intersection Observer for updating active link
     const observer = new IntersectionObserver(
         entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const id = entry.target.getAttribute("id");
-                    navLinks.forEach(link => {
-                        link.classList.toggle("active", link.getAttribute("href").substring(1) === id);
-                    });
+                    updateActiveClass(`/#${id}`);
                 }
             });
         },
-        { threshold: 0.5 } // Trigger when 50% of section is visible
+        { threshold: 0.5 }
     );
 
     sections.forEach(section => {
         observer.observe(section);
     });
 
-    // Scroll event to highlight "Home" when at the top
+    // Scroll event to highlight "Home"
     window.addEventListener("scroll", function () {
         if (window.scrollY < 50) {
-            navLinks.forEach(nav => nav.classList.remove("active"));
-            document.querySelector(".nav-link[href='/']").classList.add("active");
+            updateActiveClass("/");
         }
     });
 });
