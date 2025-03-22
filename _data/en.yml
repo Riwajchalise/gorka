@@ -112,6 +112,7 @@ contact:
   email_label: "Email"
   email: "info@grk-it.com"
   form:
+    form_id: "movedvaw"
     name_label: "Name"
     name_placeholder: "Your Name"
     email_label: "Email"

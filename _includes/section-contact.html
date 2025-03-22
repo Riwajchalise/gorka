@@ -26,19 +26,19 @@
             </div>
 
             <div class="contact-form">
-                <form>
+                <form action="https://formspree.io/f/{{ site.data[page.lang].contact.form.form_id }}" method="POST">
                     <label for="name">{{ site.data[page.lang].contact.form.name_label }}</label>
-                    <input type="text" id="name" placeholder="{{ site.data[page.lang].contact.form.name_placeholder }}" required>
-
+                    <input type="text" id="name" name="name" placeholder="{{ site.data[page.lang].contact.form.name_placeholder }}" required>
+            
                     <label for="email">{{ site.data[page.lang].contact.form.email_label }}</label>
-                    <input type="email" id="email" placeholder="{{ site.data[page.lang].contact.form.email_placeholder }}" required>
-
+                    <input type="email" id="email" name="email" placeholder="{{ site.data[page.lang].contact.form.email_placeholder }}" required>
+            
                     <label for="phone">{{ site.data[page.lang].contact.form.phone_label }}</label>
-                    <input type="tel" id="phone" placeholder="{{ site.data[page.lang].contact.form.phone_placeholder }}" required>
-
+                    <input type="tel" id="phone" name="phone" placeholder="{{ site.data[page.lang].contact.form.phone_placeholder }}" required>
+            
                     <label for="message">{{ site.data[page.lang].contact.form.message_label }}</label>
-                    <textarea id="message" placeholder="{{ site.data[page.lang].contact.form.message_placeholder }}" required></textarea>
-
+                    <textarea id="message" name="message" placeholder="{{ site.data[page.lang].contact.form.message_placeholder }}" required></textarea>
+            
                     <button type="submit">{{ site.data[page.lang].contact.form.submit_button }}</button>
                 </form>
             </div>

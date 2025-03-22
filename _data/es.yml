@@ -109,6 +109,7 @@ contact:
   email_label: "Correo electrónico"
   email: "info@grk-it.com"
   form:
+    form_id: "add_here_form_name"
     name_label: "Nombre"
     name_placeholder: "Tu Nombre"
     email_label: "Correo electrónico"
