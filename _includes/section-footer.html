@@ -14,9 +14,12 @@
             </p>
             <div class="social-icons">
                 {% for social in site.data[page.lang].footer.social_links %}
-                <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+                    {% if social.url and social.url != "" %}
+                        <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+                    {% endif %}
                 {% endfor %}
             </div>
+            
         </div>
         <div class="footer-right">
             {% for policy in site.data[page.lang].footer.policies %}
@@ -25,7 +28,7 @@
         </div>
     </footer>
     <div class="copyright">
-        &copy;
-        <script>document.write(new Date().getFullYear())</script> Copyright
+        Copyright &copy;
+        <script>document.write(new Date().getFullYear())</script>. Grk IT
     </div>
 </section>

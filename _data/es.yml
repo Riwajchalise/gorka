@@ -128,13 +128,13 @@ footer:
 
   social_links:
     - icon: "bi bi-twitter-x"
-      url: "#"
+      url:
     - icon: "fab fa-instagram"
-      url: "#"
+      url:
     - icon: "fab fa-youtube"
-      url: "#"
+      url:
     - icon: "fab fa-linkedin"
-      url: "#"
+      url:
 
   policies:
     - title: "Aviso Legal"
